@@ -1,0 +1,6 @@
+framework module mosquitto_ios {
+  umbrella header "mosquitto_ios.h"
+
+  export *
+  module * { export * }
+}
