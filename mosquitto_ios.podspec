@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'mosquitto_ios'
-  s.version          = '2.0.11'
+  s.version          = '2.0.11.1'
   s.summary          = 'Publish to CocoaPods.'
   s.description      = <<-DESC
 Eclipse Mosquitto - An open source MQTT broker
@@ -13,15 +13,8 @@ Eclipse Mosquitto - An open source MQTT broker
   s.source           = { :git => 'https://github.com/RengeRenge/mosquitto_ios.git', :tag => s.version.to_s }
 
   s.ios.deployment_target = '9.0'
-  
-  s.source_files = 'mosquitto-ios/mosquitto_ios.h'
-  s.public_header_files = 'mosquitto-ios/mosquitto_ios.h'
-  s.frameworks = 'UIKit'
-  s.vendored_frameworks = 'mosquitto_ios.framework'
-#  s.vendored_libraries = 'lib/*.a'
 
-  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-  s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
+  s.vendored_frameworks = 'mosquitto_ios.xcframework'
 
   s.dependency 'OpenSSL-Universal'
   s.dependency 'CocoaSecurity'

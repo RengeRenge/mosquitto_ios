@@ -3,3 +3,4 @@ Podfile.lock
 *.xcuserstate
 xcuserdata
 Pods
+mosquitto_ios-*/
